@@ -1,0 +1,124 @@
+<!doctype html>
+<!--
+  Source of truth for this page is docs/legal/privacy.html in the app repo.
+  Edit it there and re-publish to the stockyard-legal Pages repo — don't edit
+  the published copy directly, or the two drift apart.
+
+  The App Store "Privacy Policy URL" points here, and so do the app's sign-up
+  screen and Profile tab (src/lib/legal.ts). Keep the URL stable.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stockyard — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+      max-width: 720px; margin: 0 auto; padding: 32px 20px 64px;
+      line-height: 1.6; color: #1a1a1a; background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #f5f6f8; background: #0a0a0b; }
+      a { color: #6ea8f0; }
+    }
+    h1 { font-size: 1.7em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.15em; margin-top: 1.8em; }
+    .meta { color: #888; font-size: 0.9em; }
+    ul { padding-left: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Stockyard · Effective July 16, 2026</p>
+
+  <p>Stockyard is a simulated ("paper") trading game. You build virtual
+  portfolios with fictional money and compete with friends in private leagues.
+  <strong>No real money is invested and no real securities are bought or
+  sold.</strong> This policy explains what information we collect, why, and
+  the choices you have.</p>
+
+  <h2>Information we collect</h2>
+  <ul>
+    <li><strong>Account details:</strong> email address, username, optional
+    display name, and password (stored as a secure hash by our authentication
+    provider — we never see your plaintext password).</li>
+    <li><strong>Date of birth:</strong> collected once at sign-up to enforce
+    our minimum age (13+) and to apply additional privacy defaults for minors.
+    </li>
+    <li><strong>Profile photo (optional):</strong> if you choose to set one,
+    it is stored so league members can see it. You can remove it at any time.</li>
+    <li><strong>Game activity:</strong> your simulated portfolios, trades,
+    watchlist, league memberships, and league results. These are the product —
+    they involve no real financial information.</li>
+    <li><strong>Notification preferences and push token:</strong> if you allow
+    notifications, a device push token is stored so we can deliver the alerts
+    you've turned on.</li>
+    <li><strong>Subscription status:</strong> if you purchase Stockyard
+    Plus, we record your plan and which store billed it. Payments are processed
+    by Apple, Google, or Stripe — <strong>we never receive your card
+    number.</strong></li>
+  </ul>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>We do <strong>not</strong> sell your personal information.</li>
+    <li>We do <strong>not</strong> show ads or share your data with advertisers.</li>
+    <li>We do <strong>not</strong> track you across other companies' apps or websites.</li>
+    <li>We do <strong>not</strong> collect real brokerage, banking, or payment-card details.</li>
+  </ul>
+
+  <h2>How we use your information</h2>
+  <p>Only to run the app: signing you in, showing your portfolios and leagues
+  to you and your league members, delivering notifications you've enabled,
+  managing your subscription, and keeping the service secure.</p>
+
+  <h2>Service providers</h2>
+  <p>We use a small number of processors to operate the app, each receiving
+  only what's needed for its role:</p>
+  <ul>
+    <li><strong>Supabase</strong> — database, authentication, and file storage
+    (hosts the account and game data above).</li>
+    <li><strong>Apple App Store / Google Play</strong> — in-app subscription
+    billing.</li>
+    <li><strong>RevenueCat</strong> — subscription management (receives your
+    account ID and purchase state, never your payment details).</li>
+    <li><strong>Stripe</strong> — payment processing for purchases made outside
+    the mobile stores.</li>
+    <li><strong>Expo</strong> — push-notification delivery (receives the device
+    push token).</li>
+  </ul>
+  <p>Market prices and company data come from financial-data providers; those
+  requests are made by our servers and include no personal information about you.</p>
+
+  <h2>Sharing within leagues</h2>
+  <p>Leagues are social by design: members of a league you join can see your
+  display name, username, profile photo, simulated portfolio performance, and
+  trade activity within that league. Don't join a league with people you don't
+  want seeing your game activity.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>We keep your data while your account exists. You can delete your account
+  at any time in the app (Profile → Delete account), which permanently removes
+  your account, portfolios, trades, and league data. Subscription billing
+  records may be retained by Apple, Google, Stripe, or RevenueCat as required
+  for their financial compliance.</p>
+
+  <h2>Children</h2>
+  <p>Stockyard is not available to children under 13. Accounts for users
+  under 18 get additional privacy defaults (reduced discoverability).</p>
+
+  <h2>Security</h2>
+  <p>Data is encrypted in transit, access is controlled with row-level
+  security, and passwords are hashed. No method of storage is 100% secure, but
+  we design so that each user can only reach their own data and their leagues'.</p>
+
+  <h2>Changes</h2>
+  <p>If we make material changes to this policy, we'll update this page and
+  the effective date above.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or requests: <strong>stockyard.app@gmail.com</strong></p>
+</body>
+</html>
