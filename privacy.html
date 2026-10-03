@@ -31,7 +31,7 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="meta">Stockyard · Effective July 16, 2026</p>
+  <p class="meta">Stockyard · Effective August 27, 2026</p>
 
   <p>Stockyard is a simulated ("paper") trading game. You build virtual
   portfolios with fictional money and compete with friends in private leagues.
@@ -55,10 +55,14 @@
     <li><strong>Notification preferences and push token:</strong> if you allow
     notifications, a device push token is stored so we can deliver the alerts
     you've turned on.</li>
-    <li><strong>Subscription status:</strong> if you purchase Stockyard
-    Plus, we record your plan and which store billed it. Payments are processed
-    by Apple, Google, or Stripe — <strong>we never receive your card
-    number.</strong></li>
+    <li><strong>Crash and error reports:</strong> when the app hits an error we
+    send a diagnostic report so we can fix it. It contains your account
+    identifier, the app version, and your device model and OS version — not your
+    email, username, name, or anything you have typed.</li>
+    <li><strong>Safety actions:</strong> if you report another player we store
+    the report (including the reason you write) so we can review it, and if you
+    block a player we store your block list to keep their activity out of your
+    feeds.</li>
   </ul>
 
   <h2>What we don't do</h2>
@@ -72,7 +76,8 @@
   <h2>How we use your information</h2>
   <p>Only to run the app: signing you in, showing your portfolios and leagues
   to you and your league members, delivering notifications you've enabled,
-  managing your subscription, and keeping the service secure.</p>
+  fixing crashes and errors, and keeping the service secure. We do not use it to
+  build a profile of you or to decide what to advertise.</p>
 
   <h2>Service providers</h2>
   <p>We use a small number of processors to operate the app, each receiving
@@ -80,17 +85,21 @@
   <ul>
     <li><strong>Supabase</strong> — database, authentication, and file storage
     (hosts the account and game data above).</li>
-    <li><strong>Apple App Store / Google Play</strong> — in-app subscription
-    billing.</li>
-    <li><strong>RevenueCat</strong> — subscription management (receives your
-    account ID and purchase state, never your payment details).</li>
-    <li><strong>Stripe</strong> — payment processing for purchases made outside
-    the mobile stores.</li>
+    <li><strong>Railway</strong> — hosts our background worker, which processes
+    game data (prices, order fills, notifications) on our behalf.</li>
     <li><strong>Expo</strong> — push-notification delivery (receives the device
-    push token).</li>
+    push token, and the text of the notification, which can include another
+    player's username).</li>
+    <li><strong>Sentry</strong> — crash and error reporting (receives the
+    diagnostic reports described above).</li>
   </ul>
-  <p>Market prices and company data come from financial-data providers; those
-  requests are made by our servers and include no personal information about you.</p>
+  <p>Market prices, company data, and news are fetched by our servers, and those
+  requests include no personal information about you. Two things are loaded by
+  the app directly from other companies instead: company logos, from a
+  financial-data image service, and the pictures attached to news stories, from
+  the news agency that published them. Those requests carry your device's IP
+  address and reveal which stocks and stories you are looking at, but no account
+  information.</p>
 
   <h2>Sharing within leagues</h2>
   <p>Leagues are social by design: members of a league you join can see your
@@ -101,9 +110,8 @@
   <h2>Data retention and deletion</h2>
   <p>We keep your data while your account exists. You can delete your account
   at any time in the app (Profile → Delete account), which permanently removes
-  your account, portfolios, trades, and league data. Subscription billing
-  records may be retained by Apple, Google, Stripe, or RevenueCat as required
-  for their financial compliance.</p>
+  your account, portfolios, trades, and league data. Crash reports are not
+  linked to a deleted account and age out on their own.</p>
 
   <h2>Children</h2>
   <p>Stockyard is not available to children under 13. Accounts for users
